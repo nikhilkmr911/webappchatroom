@@ -36,3 +36,175 @@
     transform: rotate(360deg);
   }
 }
+body {
+  padding: 0;
+  margin: 0;
+  background-color: #a7bcff;
+}
+
+.App {
+  display: flex;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  flex-direction: column;
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.app-header {
+  text-align: center;
+  background-color: #3b5998;
+  color: white;
+  width: 100%;
+}
+
+.app-container {
+  margin-top: 50px;
+}
+
+.room {
+  display: flex;
+  flex-direction: column;
+}
+
+.room label {
+  text-align: center;
+  font-weight: 500;
+  font-size: 25px;
+  margin-bottom: 20px;
+}
+
+.room-label {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.room input {
+  width: 200px;
+  height: 30px;
+  border: 1px solid #ffffff;
+  border-radius: 20px;
+  padding-left: 5px;
+  font-size: 20px;
+  text-align: center;
+  margin: 5px;
+  margin-left: 100px;
+  box-shadow: 5px 10px 22px #979696;
+  
+}
+
+.room button {
+  width: 210px;
+  height: 35px;
+  border: none;
+  border-radius: 20px;
+  padding-left: 5px;
+  font-size: 16px;
+  text-align: center;
+  margin: 5px;
+  margin-left: 100px;
+  background-color: #4285f4;
+  color: white;
+  cursor: pointer;
+}
+.room button:hover{
+  background-color: #1864df;
+}
+
+.sign-out-room {
+  background-color: #d9534f;
+  border-radius: 15px;
+  border: none;
+  padding: 7px;
+  font-size: 13px;
+  text-align: center;
+  cursor: pointer;
+  margin-top: 28px;
+  font-weight: 600;
+  width:100px;
+  color: white;
+  box-shadow: 5px 10px 20px #a8a7a7;
+}
+
+.sign-out-chat {
+  background-color: #d9534f;
+  border-radius: 0.4rem;
+  border: none;
+  padding: 7px;
+  font-size: 14px;
+  text-align: center;
+  cursor: pointer;
+  font-weight: 600;
+  width:100px;
+  color: white;
+  margin-top: 4px;
+  margin-bottom: 4px;
+}
+
+.sign-out-room:hover{
+  background-color: #e95656;
+}
+.sign-out-chat:hover{
+  background-color: #e95656;
+}
+
+.login-card {
+  position: relative;
+  top: calc(50vh - 144px);
+  left: calc(50vw - 210px);
+  padding-top: 36px;
+  padding-bottom: 66px;
+  width: 410px;
+  text-align: center;
+  background-color: white;
+  border-radius: 22px;
+}
+.google {
+  background-color: #4285f4;
+  border-radius: 0.5rem;
+  border: none;
+  padding-top: 6px;
+  padding-bottom: 6px;
+  text-align: center;
+  cursor: pointer;
+  width:150px;
+  color: white;
+}
+
+.login-page {
+  background-color: #a7bcff;
+  position: absolute;
+  top: 0px;
+  bottom: 0px;
+  left: 0px;
+  right: 0px;
+}
+
+.room-page {
+  background-color: #a7bcff;
+  position: absolute;
+  top: 0px;
+  bottom: 0px;
+  left: 0px;
+  right: 0px;
+}
+.room-card {
+  position: relative;
+  top: calc(50vh - 144px);
+  left: calc(50vw - 200px);
+  padding-top: 36px;
+  padding-bottom: 66px;
+  width: 420px;
+  text-align: center;
+  background-color: white;
+  border-radius: 22px;
+}
+
+.G-logo{
+  font-weight: bolder;
+  color: white;
+}
+.sign-out-chat-div{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
