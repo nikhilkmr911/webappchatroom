@@ -46,7 +46,8 @@ export const Chat =({room})=> {
         <div 
         className="chat-app" >
         <div className="header">
-          <h2>👋🏻Welcome to {room.toUpperCase()}</h2>
+          <h2>👋🏻Customer Room for {room.toUpperCase()} owners</h2>
+          <div  style={{backgroundColor:"#3e3c61"}}>Discuss Your doubts regarding Your Car Here</div>
         </div>
         <div className="messages">
           {messages.map((message) => (

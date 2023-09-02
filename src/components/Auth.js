@@ -20,7 +20,7 @@ export const Auth=({setIsAuthprop})=>{
     <div className="login-page">
     <div className="login-card">
     <div className="auth">
-        <h3>Welcome To Chatroom!</h3>
+        <h3>Welcome To Auto Room!</h3>
         <p>Sign In With Google To Continue</p>
         <button className="google" onClick={signInWithGoogle}><span className="G-logo">G </span>Sign In With Google</button>
     </div>
