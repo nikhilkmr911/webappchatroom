@@ -1,3 +1,25 @@
+ @keyframes scrollBg {
+  from {
+    transform: translateY(0px);
+  }
+  to {
+    transform: translateY(-330px);
+  }
+} 
+
+.scroll-bg {
+  height: 200%;
+  width: 100%;
+  position: fixed;
+  padding-bottom: 330px;
+  background-color: #E8BA9B;
+  background-image: url('/public/bgcar.jpg');
+  filter: blur(5px) brightness(0.5);
+  background-size: cover;
+  animation: scrollBg 40s linear infinite;
+}
+
+ 
  .chat-app {
     display: flex;
     flex-direction: column;
@@ -10,12 +32,12 @@
     border-radius: 5px;
     overflow: auto;
     overflow-x: hidden;
-    border: 2px solid #3e3c61;
+    border: 2px solid rgb(166, 165, 165);
     background-color: #e8eeff;
     height: 660px;
   }
   .header {
-    background-color: #3e3c61;
+    background-color: rgb(14, 44, 34);
     color: white;
     width: 100%;
     text-align: center;
@@ -33,17 +55,24 @@
   
   .message {
     display: flex;
+    flex-wrap: wrap; /* Add this property */
     align-items: flex-start;
     margin-bottom: 10px;
     white-space: normal;
-  }
-  
+    color: #fcf9f9;
+    background-color: rgb(14, 44, 34);
+    margin: 2px;
+    padding: 5px;
+    border-radius: 5px;
+    max-width: 70%; /* Adjust the max width as needed */
+}
+
  
   .user {
     font-weight: bold;
     margin-right: 10px;
     margin-left: 5px;
-    color: #333;
+    color: #f3eded;
   }
   
   .new-message-form {
@@ -68,7 +97,7 @@
     border: none;
     width: 50px;
     border-radius: 0.4rem;
-    background:  #3e3c61;
+    background:  rgb(14, 44, 34);
     color: #fff;
     font-size: 13px;
     font-weight: 600;
@@ -76,3 +105,21 @@
     cursor: pointer;
   }
 
+.card{
+  float: left;
+  margin: 6px;
+}
+
+.form-input{
+  border-radius: 5px;
+  color: #333;
+}
+
+.container .box{
+  display: flex;
+  flex-direction: row;
+}
+
+.card-content{
+  text-align: left;
+}

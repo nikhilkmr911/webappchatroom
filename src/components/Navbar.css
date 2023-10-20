@@ -1,0 +1,38 @@
+ .navbar {
+    color: #fff; 
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 22px;
+    font-weight:500;
+  }
+  
+  .nav-links {
+    list-style: none;
+    display: flex;
+  }
+  
+  .nav-item {
+    margin-right: 20px;
+    border-radius: 10px;
+    background-color: #000;
+    padding: 6px;
+  }
+  
+  .nav-item:last-child {
+    margin-right: 0;
+  }
+  
+  .nav-item a {
+    text-decoration: none;
+    color: #fff;
+  }
+  
+  .nav-item.active {
+    text-decoration: overline; 
+    color: #fff;
+  }
+  
+  
+  

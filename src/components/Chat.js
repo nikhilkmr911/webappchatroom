@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 import { addDoc, collection, serverTimestamp, query, where, onSnapshot, orderBy } from "firebase/firestore";
-import { async } from "@firebase/util";
+//import { async } from "@firebase/util";
 import { auth, db} from "../firebase-config";
 import  "../styles/Chat.css";
 
@@ -43,20 +43,20 @@ export const Chat =({room})=> {
     };
 
     return (
-        <div 
-        className="chat-app" >
+        <div className="chat-app" style={{ backgroundImage: "url('whatsappbg2.jpg')", backgroundSize: 'cover' }}>
         <div className="header">
-          <h2>👋🏻Customer Room for {room.toUpperCase()} owners</h2>
-          <div  style={{backgroundColor:"#3e3c61"}}>Discuss Your doubts regarding Your Car Here</div>
+          <h2>Customer Room for {room.toUpperCase()} owners</h2>
+          <div>Discuss Your doubts regarding Your Car Here</div>
         </div>
-        <div className="messages">
+        <div className="messages" >
           {messages.map((message) => (
             <div key={message.id} className="message">
-              <span className="user">{message.user}</span> {message.text} 
+              <span className="user">{message.user} :</span> {message.text} 
             </div>
           ))}
           <div ref={ref} />
         </div>
+        
         <form onSubmit={handleSubmit} className="new-message-form">
             <input
               type="text"
@@ -67,6 +67,8 @@ export const Chat =({room})=> {
             />
             <button type="submit" className="send-button">Send</button>
         </form>
+        
     </div>
     );
 };
+export default Chat;
