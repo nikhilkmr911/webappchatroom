@@ -45,7 +45,7 @@ export const Chat =({room})=> {
     return (
         <div className="chat-app" style={{ backgroundImage: "url('whatsappbg2.jpg')", backgroundSize: 'cover' }}>
         <div className="header">
-          <h2>Customer Room for {room.toUpperCase()} owners</h2>
+          <h2>Customer Room for {room} owners</h2>
           <div>Discuss Your doubts regarding Your Car Here</div>
         </div>
         <div className="messages" >
