@@ -10,7 +10,7 @@ export default function Premium() {
     <h1 style={{textAlign:"center", color:"white",marginBottom:"50px"}}>Premium QnA Section</h1>
 
     <h3 style={{color:"white",marginLeft:"5px"}}>Get your questions answered by Experts !!</h3>
-    <p style={{color:"white",marginLeft:"5px", fontSize:"20px",fontFamily:"sans-serif"}}>Go to Connect button to interact with your favourite expert and get your answers via phone call within 24 hours !!</p>
+    <p style={{color:"white",marginLeft:"5px", fontSize:"18px",fontFamily:"sans-serif"}}>Go to Connect button to interact with your favourite expert and get your answers via phone call within 24 hours !!</p>
     
     <div>
     {
@@ -28,7 +28,7 @@ export default function Premium() {
             </div>
               <div className="card-footer bg-white">
                  <a href={`mailto:${data.email}`} style={{marginRight:"100px", backgroundColor:"#ffffff"}} className="btn">📧{data.email}</a>
-                 <Link  className="m-3 mx-1 btn btn-primary" >Connect</Link>
+                 <Link  className="m-3 mx-1 btn btn-primary" to="/premium/connect">Connect</Link>
             </div>
         </div>
       ))}

@@ -36,12 +36,6 @@ export default function Home() {
     { url: t7 , title:"image-7"}
   ]
 
- const containerStyles={
-  width:"600px",
-  height: "600px",
-  margin: "0 auto"
- } 
-
   const signUserOut=async()=>{
     await signOut(auth);
     cookies.remove("auth-token")
@@ -65,45 +59,47 @@ function roomNull(){
   <> 
   {room ? (
    <Chat room={room}/> ): ( 
-    
     <div className='room-page'>
     <div class="scroll-bg"></div>
     <Navbar signUserOut={signUserOut}/>
     <div className='room-card'>
     <div className="room"> 
-        <input className="input-box" placeholder="Select Car Model..." ref={roomInputRef}/>
-        <button onClick={()=> setRoom(roomInputRef.current.value)} >Enter Chat</button>
+        <h7>Connect with fellow car owners who share same model</h7>
+        <input className="input-box" placeholder="Enter Car Model..." ref={roomInputRef}/>
+        <button className="enter-chat-btn" onClick={()=> setRoom(roomInputRef.current.value)} >Enter Chat</button>
     </div>
     </div>
+
     <div style={{textAlign:"center", position:"relative", marginTop:"30px"}}> 
     
-    
+    <div className='mechprelinks'>
     <Link  className="m-3 mx-1 btn btn-primary" to="/mech">Mechanics</Link>
-    <Link  className="m-3 mx-1 btn btn-primary" to="/premium">Premium QnA</Link>
+    <Link  className="m-3 mx-1 btn btn-primary" to="/premium">Premium QnA ♛</Link>
+    </div>
     
-    <h1 style={{ marginTop: "50px", marginBottom: "20px" }}>
+    <h4 style={{ marginTop: "50px", marginBottom: "20px" }}>
          <span style={{ backgroundColor: "black", color: "#fff", borderRadius: "5px" ,fontSize:"80%", padding:"5px"}}>
            News/Articles
          </span>
-    </h1>
+    </h4>
   <div className='container'>  
    <div className='box'>
    <div>
-   <div class="card shadow border border-4" style={{width: "16rem", height: "34rem"}}>
+   <div class="card shadow border border-4 card-first">
             <div className="card-header bg-white">
             <h4 className="card-title" style={{fontWeight:"bolder"}}>Feed</h4>
             </div>
-            <div className="card-body card-content">
+            <div className="card-body card-content ">
               <p className="card-text">The Hyundai Verna has grabbed five stars for both adult and child occupant protection. It is the first made-in-India Hyundai car to get a full 5-star rating in the safety assessment.<br/><a href="https://www.cardekho.com/india-car-news/2023-hyundai-verna-scores-5-stars-in-global-ncap-crash-tests-31518.htm#:~:text=The%20Hyundai%20Verna%20has%20grabbed,in%20adult%20occupant%20protection%20assessments." className="btn btn-warning">visit feed</a></p>
               <p className="card-text">Tata Motors has launched the Harrier facelift at Rs 15.49 lakh for the base Smart (O) MT variant, (introductory price, ex-showroom, India). The Harrier facelift gets a revised exterior and interior, and an updated features list.<br /><a href="https://www.autocarindia.com/car-news/tata-harrier-facelift-launched-at-rs-1549-lakh-429534" className="btn btn-warning">visit feed</a> </p>
             </div>
         </div>
     </div>
-    <div style={containerStyles} >
+    <div className='containerStyles'>
       <ImageSlider slides={slides} />
     </div>
     <div>
-    <div class="card shadow border-4" style={{width: "15rem", height: "20rem"}}>
+    <div class="card shadow border-4 card-third" >
             <div className="card-header bg-white" >
             <h4 className="card-title" style={{fontWeight:"bolder", color:"black"}}>New Launches!</h4>
             </div>
@@ -120,10 +116,8 @@ function roomNull(){
     </div>
    </div> 
   </div>
-
-    </div>
   </div>
-  
+  </div>
 
       )}
         <div className="sign-out-chat-div">

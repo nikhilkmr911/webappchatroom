@@ -16,10 +16,16 @@
   background-image: url('/public/bgcar.jpg');
   filter: blur(5px) brightness(0.5);
   background-size: cover;
-  animation: scrollBg 40s linear infinite;
+  animation: scrollBg 35s linear infinite;
 }
 
- 
+@media (max-width: 768px) {
+
+  :link{
+    font-size: x-small;
+  }
+}
+
  .chat-app {
     display: flex;
     flex-direction: column;
@@ -34,8 +40,9 @@
     overflow-x: hidden;
     border: 2px solid rgb(166, 165, 165);
     background-color: #e8eeff;
-    height: 660px;
+    height: 670px;
   }
+
   .header {
     background-color: rgb(14, 44, 34);
     color: white;
@@ -123,3 +130,49 @@
 .card-content{
   text-align: left;
 }
+.card-first{
+  width: 16rem;
+  height:34rem
+}
+
+.card-third{
+  width: 15rem;
+  height: 20rem
+}
+
+@media (max-width:768px) {
+  .container .box{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 50px;
+  }
+  .card-third{
+    margin-top: 70px;
+    width: 50px;
+    height: 200px;
+  }
+  .card-first{
+    width: 300px;
+    height: 420px;
+  }
+  .chat-app {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: sans-serif;
+    width: 93%;
+    margin-top: 6px;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 5px;
+    overflow: auto;
+    overflow-x: hidden;
+    border: 2px solid rgb(166, 165, 165);
+    background-color: #e8eeff;
+    height: 690px;
+  }
+}
+
+
+

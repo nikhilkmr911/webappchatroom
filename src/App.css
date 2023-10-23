@@ -1,12 +1,3 @@
-@keyframes scrollBg {
-  from {
-    transform: translateY(0px);
-  }
-  to {
-    transform: translateY(-330px);
-  }
-}
-
 .h3{
   display: block;
   font-size: 1.17em;
@@ -24,20 +15,7 @@
     margin-inline-start: 0px;
     margin-inline-end: 0px;
 }
-/* .scroll-bg {
-  height: 100%;
-  width: 100%;
-  position: fixed;
-  padding-bottom: 330px;
-  background-color: #E8BA9B;
-  background-image: url('https://andreivictor.ro/codepen/scroll-bg-animation-pinterest/bg_pasta_grid-3f880df3.jpg');
-  background-size: cover;
-  animation: scrollBg 35s linear forwards;
-} */
 
-.App {
-  text-align: center;
-}
 
 .App-logo {
   height: 40vmin;
@@ -51,7 +29,6 @@
 }
 
 .App-header {
-  background-color: #8faeee;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -85,6 +62,7 @@ body {
 
 .App {
   display: flex;
+  text-align: center;
   align-items: center;
   width: 100vw;
   height: 100vh;
@@ -151,6 +129,139 @@ body {
   background-color: #1864df;
 }
 
+.room-card {
+  position: relative;
+  top: calc(50vh - 350px);
+  left: calc(50vw - 200px);
+  padding-top: 36px;
+  padding-bottom: 66px;
+  width: 420px;
+  text-align: center;
+  background-color: white;
+  border-radius: 20px;
+  border: 4px solid rgb(217, 217, 225);
+  box-shadow: 5px 10px 22px rgb(143, 141, 141);
+}
+
+p{
+  font-size: 20px;
+  font-weight: 400;
+}
+
+.containerStyles{
+  width:600px;
+  height: 600px;
+  margin: 0 auto
+}
+
+.login-card {
+  position: relative;
+  top: calc(50vh - 144px);
+  left: calc(50vw - 210px);
+  padding-top: 36px;
+  padding-bottom: 66px;
+  width: 410px;
+  text-align: center;
+  background-color: white;
+  border-radius: 22px;
+  box-shadow: 5px 10px 22px rgb(94, 92, 137);
+}
+
+@media (max-width:768px) {
+
+  h2{
+    font-size: 20px;
+  }
+  h3{
+    font-size: 18px;
+  }
+  p{
+    font-size: 9px;
+    font-weight: 200;
+  }
+  .containerStyles{
+    width:310px;
+    height: 310px;
+    margin: 0 auto
+  }
+  .card{
+    width: 90%;
+  }
+  .card-text{
+    font-size: small;
+  }
+  .mechprelinks{
+    margin-top: 100px;
+    margin-left: 30px;
+  }
+  .room-card {
+    position: relative;
+    top: calc(50vh - 350px);
+    left: calc(36vw - 100px);
+    padding-top: 36px;
+    padding-bottom: 66px;
+    width: 320px;
+    text-align: center;
+    background-color: white;
+    border-radius: 12px;
+    border: 2px solid rgb(217, 217, 225);
+    box-shadow: 2px 5px 10px rgb(143, 141, 141);
+  }
+  .room input {
+    width: 120px;
+    height: 20px;
+    border: 1px solid #ffffff;
+    border-radius: 10px;
+    padding-left: 2px;
+    font-size: 10px;
+    text-align: center;
+    margin: 2px;
+    margin-left: 100px;
+    box-shadow: 2px 5x 11px #979696;
+  }
+  .room button {
+    width: 80px;
+    height: 25px;
+    border: none;
+    border-radius: 10px;
+    padding-left: 2px;
+    font-size: 10px;
+    text-align: center;
+    margin: 5px;
+    margin-left: 120px;
+    background-color: #4285f4;
+    color: white;
+    cursor: pointer;
+  }
+  .room button:hover{
+    background-color: #1864df;
+  }
+  .sign-out-chat {
+    background-color: #d9534f;
+    border-radius: 0.4rem;
+    border: none;
+    padding: 2px;
+    font-size: 8px;
+    text-align: center;
+    cursor: pointer;
+    font-weight: 500;
+    width:50px;
+    color: white;
+    margin-top: 1px;
+    margin-bottom: 1px;
+  }
+  .login-card {
+    position: relative;
+    top: calc(50vh - 144px);
+    left: calc(60vw - 200px);
+    padding-top: 36px;
+    padding-bottom: 66px;
+    width: 320px;
+    text-align: center;
+    background-color: rgb(255, 255, 255);
+  }
+}
+
 .sign-out-room {
   background-color: #d9534f;
   border-radius: 15px;
@@ -188,18 +299,6 @@ body {
   background-color: #e95656;
 }
 
-.login-card {
-  position: relative;
-  top: calc(50vh - 144px);
-  left: calc(50vw - 210px);
-  padding-top: 36px;
-  padding-bottom: 66px;
-  width: 410px;
-  text-align: center;
-  background-color: white;
-  border-radius: 22px;
-  box-shadow: 5px 10px 22px rgb(94, 92, 137);
-}
 .google {
   background-color: #4285f4;
   font-size: 14px;
@@ -213,8 +312,21 @@ body {
   color: white;
 }
 
+@media (max-width:768px) {
+  .google {
+    font-size: 14px;
+    border-radius: 0.5rem;
+    border: none;
+    padding-top: 6px;
+    padding-bottom: 6px;
+    text-align: center;
+    cursor: pointer;
+    width:60%;
+    color: white;
+  }
+}
+
 .login-page {
-  background-color: #a7bcff;
   position: absolute;
   top: 0px;
   bottom: 0px;
@@ -229,19 +341,6 @@ body {
   bottom: 0px;
   left: 0px;
   right: 0px;
-}
-.room-card {
-  position: relative;
-  top: calc(50vh - 350px);
-  left: calc(50vw - 200px);
-  padding-top: 36px;
-  padding-bottom: 66px;
-  width: 420px;
-  text-align: center;
-  background-color: white;
-  border-radius: 20px;
-  border: 4px solid rgb(217, 217, 225);
-  box-shadow: 5px 10px 22px rgb(143, 141, 141);
 }
 
 .room-card-2 {

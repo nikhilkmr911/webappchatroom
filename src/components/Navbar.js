@@ -22,7 +22,7 @@ export default function Navbar({ signUserOut }) {
           <Link to="/premium">Premium QnA</Link>
         </li>
         <li>
-          <button onClick={signUserOut} className="btn btn-danger">
+          <button onClick={signUserOut} className="sign-out-chat">
             Sign Out
           </button>
         </li>

@@ -4,8 +4,24 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    font-size: 22px;
+    font-size: 18px;
     font-weight:500;
+  }
+
+  @media (max-width:768px){
+    .navbar {
+      color: #fff; 
+      padding: 2px 2px;
+      align-items: center;
+      font-size: 12px;
+      font-weight:400;
+    }
+    .nav-item {
+      margin-right: 3px;
+      border-radius: 5px;
+      padding: 2px;
+      background-color: none;
+    }
   }
   
   .nav-links {
